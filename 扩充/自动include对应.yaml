@@ -1,0 +1,45 @@
+opencv:
+   - -I D:\黑科技\snow\c和cpp的库\opencv\build_vs14_3.3\include
+   - -I D:\黑科技\snow\c和cpp的库\opencv\build_vs14_3.3\include\opencv
+   - -I D:\黑科技\snow\c和cpp的库\opencv\build_vs14_3.3\include\opencv2
+   - -L D:\黑科技\snow\c和cpp的库\opencv\build_vs14_3.3\x64\vc14\lib
+   - -l opencv_world330
+   - -l opencv_world330d
+
+glut:
+  - -I D:\黑科技\snow\c和cpp的库\freeglut\include
+  - -I D:\黑科技\snow\c和cpp的库\freeglut\include\GL
+  - -L D:\黑科技\snow\c和cpp的库\freeglut\lib\x64
+
+python.h:
+  - -I "D:\Python 3.5\include"
+  - -L "D:\Python 3.5\libs"
+
+pcap:
+  - -I D:\黑科技\snow\c和cpp的库\WpdPack\Include
+  - -L D:\黑科技\snow\c和cpp的库\WpdPack\Lib
+
+glew:
+  - -I D:\黑科技\snow\c和cpp的库\glew-2.1.0\include
+  - -L D:\黑科技\snow\c和cpp的库\glew-2.1.0\lib\Release\Win32
+  - -l glew32s
+
+glfw:
+  - -I D:\黑科技\snow\c和cpp的库\glfw-3.2.1.bin.WIN32\include
+  - -L D:\黑科技\snow\c和cpp的库\glfw-3.2.1.bin.WIN32\lib-mingw
+  - -l glfw3
+  - -l gdi32
+  - -l opengl32
+
+SOIL:
+  - -I D:\黑科技\snow\c和cpp的库\soil\include
+  - -L D:\黑科技\snow\c和cpp的库\soil\libs
+  - -l SOIL
+
+snow_dll:
+  - -shared
+  - -O3
+
+DxLib: 
+  - -I D:\黑科技\snow\c和cpp的库\DxLibNoneSoftDrawCode
+  - -L D:\黑科技\snow\c和cpp的库\DxLibNoneSoftDrawCode
