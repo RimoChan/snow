@@ -1,13 +1,16 @@
 import os
 import time
+import platform
 from contextlib import contextmanager
 
-import win32api
-import win32con
+
+if platform.system()=='Windows':
+    import win32api
+    import win32con
 
 
 def py(文件名):
-    os.system(f'python "{文件名}"')
+    os.system(f'python3 "{文件名}"')
 
 
 def pyj(文件名, 主名):

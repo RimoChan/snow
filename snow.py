@@ -3,24 +3,26 @@ import os
 import logging
 import inspect
 import tempfile
+import platform
 
-import 位置控制
 import 召唤
+
+if platform.system()=='Windows':
+    import 位置控制
+    位置控制.自动调整()
 
 
 虚无 = True
-
-
-位置控制.自动调整()
-
-
+独立 = False
 
 def nya():
     if len(sys.argv) == 1:
         os.system('pmd')
         sys.exit()
-    print('------------------------------------------------------------')
-
+    if 独立:
+        print('------------------------------------------------------------')
+        os.system(f'title {文件名} - snow')
+ 
     全名 = sys.argv[1]
     全名.replace('/', '\\')
 
@@ -33,8 +35,6 @@ def nya():
     if 虚无:
         exe = f'{tempfile.gettempdir()}\\the_program_of_Rimo.exe'
         路径 = tempfile.gettempdir()
-       
-    os.system(f'title {文件名} - snow')
 
     if 扩展名 in 召唤.__dict__:
         f = 召唤.__dict__[扩展名]
@@ -51,5 +51,6 @@ try:
 except Exception as e:
     logging.exception(e)
 
-print()
-os.system('pause')
+if 独立:
+    print()
+    os.system('pause')
