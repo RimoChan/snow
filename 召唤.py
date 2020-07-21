@@ -83,10 +83,7 @@ def md(文件名):
 
 
 def go(文件名, exe):
-    os.system(f'cmd /c del "{exe}" > nul 2>&1')
-    os.system(f'go.exe build "{文件名}"')
-    _log_编译好了()
-    os.system(exe)
+    os.system(f'go run "{文件名}"')
 
 
 def java(路径, 主名, 文件名):
