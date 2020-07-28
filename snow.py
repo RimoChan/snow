@@ -9,6 +9,8 @@ import fire
 
 import 召唤
 
+from utils import pause
+
 
 if platform.system() == 'Windows':
     import 位置控制
@@ -53,7 +55,7 @@ def nya(file=None, 虚无=True, 独立=True):
 
     if 独立:
         print()
-        os.system('pause')
+        pause()
 
 
 fire.Fire(nya)
