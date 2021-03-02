@@ -1,7 +1,21 @@
 import os
 import time
 import platform
+from pathlib import Path
 from contextlib import contextmanager
+
+import yaml
+
+
+命令 = {
+    'python': 'python3',
+}
+
+
+q = Path.home() / '.snow/命令.yaml'
+if q.is_file():
+    with open(q) as f:
+        命令.update(yaml.safe_load(f))
 
 
 if platform.system()=='Windows':
@@ -10,7 +24,7 @@ if platform.system()=='Windows':
 
 
 def py(文件名):
-    os.system(f'python3 "{文件名}"')
+    os.system(f'{命令["python"]} "{文件名}"')
 
 
 def pyj(文件名, 主名):
@@ -75,11 +89,11 @@ def dot(文件名):
     os.system(f'cmd /c del "{主名}.png" > nul 2>&1')
     os.system(f'dot "{文件名}" -Tpng -o "{主名}.png"')
     os.system(f'"{主名}.png"')
-    # os.system(f'python D:/黑科技/ultiviz/ultiviz.py "{文件名}"')
+    # os.system(f'{命令["python"]} D:/黑科技/ultiviz/ultiviz.py "{文件名}"')
 
 
 def md(文件名):
-    os.system(f'python D:/黑科技/md轉pdf/md轉pdf.py --md "{文件名}"')
+    os.system(f'{命令["python"]} D:/黑科技/md轉pdf/md轉pdf.py --md "{文件名}"')
 
 
 def go(文件名, exe):
@@ -131,13 +145,13 @@ def rs(文件名):
 
 def ptml(文件名, 主名):
     with _真视(f'{主名}.html'):
-        os.system(f'python d:/_封閉的git項目/ptml/PTML.py --ptml "{文件名}" --jinja2 0')
+        os.system(f'{命令["python"]} d:/_封閉的git項目/ptml/PTML.py --ptml "{文件名}" --jinja2 0')
 
 
 def liber(文件名, 主名):
     pdf = f'"{主名}.pdf"'
     print()
-    os.system(f'python D:/Librian/Librian本體/導出文件.py --play {文件名} --out {pdf} --css D:/Librian/Librian本體/資源/導出pdf用/紙樣式.css --css D:/Librian/Librian本體/資源/導出pdf用/樣式_人物名.css --chs')
+    os.system(f'{命令["python"]} D:/Librian/Librian本體/導出文件.py --play {文件名} --out {pdf} --css D:/Librian/Librian本體/資源/導出pdf用/紙樣式.css --css D:/Librian/Librian本體/資源/導出pdf用/樣式_人物名.css --chs')
     os.system(f'start "" {pdf}')
 
 
