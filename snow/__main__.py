@@ -15,6 +15,11 @@ def nya(file=None, 虚无=True, 独立=True):
     if platform.system() == 'Windows' and 独立:
         from snow import 位置控制
         位置控制.自动调整()
+    if not 独立:
+        if platform.system() == 'Windows':
+            os.system('cls')
+        else:
+            os.system('clear')
     try:
         if file is None:
             os.system('pmd')
