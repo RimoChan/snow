@@ -9,6 +9,7 @@ import yaml
 
 命令 = {
     'python': 'python3',
+    'sh': 'sh',
 }
 
 
@@ -79,7 +80,7 @@ def lua(文件名):
 
 
 def sh(文件名):
-    os.system(f'cmd /c "{文件名}"')
+    os.system(f'{命令["sh"]} /c "{文件名}"')
 
 
 bat = cmd = sh
