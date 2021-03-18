@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name='snow',
-    version='0.0.2',
+    version='0.0.3',
     author='RimoChan',
     author_email='the@librian.net',
     description='snow',

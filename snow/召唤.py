@@ -80,7 +80,7 @@ def lua(文件名):
 
 
 def sh(文件名):
-    os.system(f'{命令["sh"]} /c "{文件名}"')
+    os.system(f'{命令["sh"]} "{文件名}"')
 
 
 bat = cmd = sh
