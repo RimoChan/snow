@@ -47,7 +47,7 @@ def yaml(文件名):
     import yaml
     with open(文件名, encoding='utf-8') as f:
         print(yaml.safe_load(f.read()))
-
+yml = yaml
 
 def lisp(文件名):
     os.system(f'clisp "{文件名}"')
@@ -144,7 +144,7 @@ def rs(文件名):
     os.system(exe)
 
 
-def ptml(文件名, 主名):
+def hrml(文件名, 主名):
     with _真视(f'{主名}.html'):
         os.system(f'{命令["python"]} d:/_封閉的git項目/ptml/PTML.py --ptml "{文件名}" --jinja2 0')
 
