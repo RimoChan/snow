@@ -146,7 +146,7 @@ def rs(文件名):
 
 def hrml(文件名, 主名):
     with _真视(f'{主名}.html'):
-        os.system(f'{命令["python"]} d:/_封閉的git項目/ptml/PTML.py --ptml "{文件名}" --jinja2 0')
+        os.system(f'{命令["python"]} -m hrml "{文件名}" -o "{主名}.html"')
 
 
 def liber(文件名, 主名):
