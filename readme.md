@@ -4,10 +4,19 @@
 
 因为我习惯用文本编辑器写各种代码，然后里面提供的一键运行功能常常是各种垃圾……所以就自己写了这样的一个工具，把所有的文件类型的运行步骤都凑到一起，跑起来方便一些。
 
+
+## 安装方法
+
+首先你需要1个Python，然后:
+
+```
+pip install git+https://github.com/RimoChan/snow.git
+```
+
 ## 使用方法
 
 ```cmd
-python snow.py {代码文件名}
+python -m snow {代码文件名}
 ```
 
 ## 模块
